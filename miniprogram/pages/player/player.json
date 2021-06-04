@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "progressbar":"../../components/progressbar/progressbar",
+    "l-lyric":"../../components/lyric/lyric"
+  }
+}

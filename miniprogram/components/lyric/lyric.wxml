@@ -1,0 +1,9 @@
+<scroll-view hidden="{{isLyricShow}}" class="warpper" scroll-top="{{scrollTop}}" scroll-y
+scroll-with-animation="true"
+>
+<view class="lrc-area">
+  <block wx:for="{{lrclist}}" wx:key="item">
+    <view class="lrc-line {{index==nowLrcIndex?'hightlight':''}}">{{item.lrc}}</view>
+  </block>
+</view>
+</scroll-view>

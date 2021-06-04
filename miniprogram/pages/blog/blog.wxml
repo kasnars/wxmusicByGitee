@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="header">
+    <view class="publish" bindtap="onPublish">
+      <text class="iconfont icon-public"></text>
+    </view> 
+    <view class="search">
+      <!-- <text class="iconfont icon-sousuo"></text> -->
+      <l-search iconfont="iconfont" icon-sousuo="icon-sousuo"
+      bind:search="onSearch">
+      </l-search>
+    </view>
+  </view>
+
+  <view class="blog-list">
+    <block wx:for="{{blogList}}" wx:key="index">
+      <view class="blog-panel">
+        <blogcard blog="{{item}}" bindtap="goComment" data-blogid="{{item._id}}"></blogcard>
+      </view>
+    </block>
+  </view>
+ 
+  <l-login modalshow="{{modalshow}}"></l-login>
+</view>

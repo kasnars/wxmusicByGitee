@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "l-search":"../../components/search/search",
+    "l-login":"../../components/login/login",
+    "blogcard":"../../components/blogcard/blogcard"
+  },
+  "navigationBarTitleText": "发现",
+  "enablePullDownRefresh": true
+}

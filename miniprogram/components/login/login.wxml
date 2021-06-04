@@ -1,0 +1,5 @@
+<l-bottom modalshow="{{modalshow}}">
+  <view slot="modal-content">
+    <button>获取微信授权信息</button>
+  </view>
+</l-bottom>

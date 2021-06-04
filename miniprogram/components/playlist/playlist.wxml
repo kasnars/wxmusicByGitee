@@ -1,0 +1,10 @@
+<!--components/playlist/playlist.wxml-->
+<view class="playlist_warp" bind:tap="gotoMusicList">
+    <image src="{{playlist.picUrl}}" alt="" class="playlist_img"></image>
+  <view class="playlist-title"> 
+    {{playlist.name}}
+  </view>
+  <view class="playlist-count">
+    {{_count}}
+  </view>
+</view>

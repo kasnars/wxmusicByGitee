@@ -1,0 +1,14 @@
+<!--components/musicitemlist/musicitemlist.wxml-->
+<block wx:for="{{musiclist}}" wx:key="id">
+  <view class="item {{tapid === item.id ? 'playing':''}}" bindtap="tapsong" 
+  data-musicid="{{item.id}}" data-musicindex="{{index}}">
+    <view class="itemindex">{{index+1}}</view>
+    <view class="musicinfo">
+      <view class="line">
+      <text class="name">{{item.name}}</text>
+      <text class="orthername">{{item.alia.length == 0?'':item.alia[0]}}</text>
+      </view>
+      <view class="singer">{{item.ar[0].name}}---{{item.al.name}}</view>
+    </view>
+  </view>
+</block>

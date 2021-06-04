@@ -1,0 +1,21 @@
+<view class="musicbg" style="background:url({{musicImgUrl}}) center/cover no-repeat"></view>
+<view class="bgmask"></view>
+<view class="player-info">
+  <view class="player-dic {{isPlay?'play':''}}" hidden="{{isLyricShow}}"
+   bindtap="onChangeLyricShow">
+    <image class="player-img rotation  {{isPlay?'':'rotation-paused'}}" src="{{musicImgUrl}}"></image>
+  </view>
+  <l-lyric isLyricShow="{{!isLyricShow}}" bindtap="onChangeLyricShow"
+lyric="{{lyric}}" class="lrc">
+</l-lyric>
+</view>
+
+<view class="bar">
+  <progressbar bind:musicEnd="toNext"  bind:timeupdate="timeUpdate"></progressbar>
+</view>
+<view class="con">
+  <view class="iconfont .icon-shangyishou" bindtap="toPre"></view>
+  <view class="iconfont{{isPlay?'.icon-zanting':'.icon-icon_play'}}"
+   bindtap="changeTap"></view>
+  <view class="iconfont .icon-xiayishou" bindtap="toNext"></view>
+</view>

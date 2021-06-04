@@ -1,0 +1,18 @@
+<view class="warp">
+  <text class="time">{{time.nowTime}}</text>
+  <view class="control">
+    <movable-area class="area">
+      <movable-view class="movview"
+      direction="horizontal"
+      damping="1000"
+      x="{{movdis}}"
+      bindchange="onChange"
+      bindtouchend="onTouchEnd"
+      />
+      <progress stroke-width="4" backgroundColor="#969696" activeColor="#fff"
+      percent="{{progress}}" class="pro">
+      </progress>
+    </movable-area>
+  </view>
+  <text class="time">{{time.allTime}}</text>
+</view>

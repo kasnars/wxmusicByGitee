@@ -1,0 +1,39 @@
+.listTitle{
+  height: 320rpx;
+  filter:blur(40rpx);
+  opacity: 0.4;
+}
+.datamsk{
+  position: absolute;
+  width: 100%;
+  height: 320rpx;
+  left: 0;
+  top: 0;
+  background-color: #333;
+  z-index: -1;
+}
+.datainfo{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 320rpx;
+  width: 100%;
+  display: flex;
+  padding: 20rpx;
+  box-sizing: border-box;
+  align-items: center;
+}
+.dataimg{
+  width: 280rpx;
+  height: 280rpx;
+  margin-right: 24rpx;
+  border-radius: 6rpx;
+}
+.datatext{
+  flex-grow: 1;
+  width: 0;
+  line-height: 60rpx;
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: 400;
+}

@@ -1,0 +1,35 @@
+page{
+  background-color: #f1f1f1;
+}
+.blog{
+  padding: 20rpx;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+.blog-title{
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.blog-portrait{
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.blog-box{
+  font-size: 30rpx;
+  color: #000000;
+}
+.blog-image{
+  display: flex;
+  flex-wrap: wrap;
+}
+.blog-img{
+  margin: 10rpx 20rpx 10rpx 0;
+  width: 220rpx;
+  height: 220rpx;
+}
+.blog-content{
+  font-size: 35rpx;
+}
