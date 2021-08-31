@@ -1,6 +1,6 @@
-<swiper indicator-dots="true" autoplay="true">
+<swiper indicator-dots="true" autoplay="true" >
   <block wx:for="{{swiperImgUrl}}" wx:key="item" >
-    <swiper-item>
+    <swiper-item bindtap="toweb"   data-picid="{{index}}">
       <image src="{{item.url}}" alt="" mode="widthFix" class="img"></image>
     </swiper-item>
   </block>

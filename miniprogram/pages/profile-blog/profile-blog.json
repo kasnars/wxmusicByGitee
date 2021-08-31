@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "blogcard":"../../components/blogcard/blogcard",
+    "blogctrl":"../../components/blog-ctrl/blog-ctrl"
+  },
+  "navigationBarTitleText": "我发布的"
+}

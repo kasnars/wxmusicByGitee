@@ -7,6 +7,7 @@ const TcbRouter = require('tcb-router')
 const rp = require('request-promise')
 const BASE_URL = 'http://www.huangjingxian.cn:3000'
 
+const MAX_LIMIT =100
 // 云函数入口函数
 exports.main = async (event, context) => {
 
@@ -45,6 +46,7 @@ exports.main = async (event, context) => {
       return res
     })
   })
+
 
     return app.serve() // 最后返回app.serve
 }

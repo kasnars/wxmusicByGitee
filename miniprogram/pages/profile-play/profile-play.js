@@ -1,33 +1,32 @@
-// pages/profile/profile.js
+// pages/profile-play/profile-play.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    musiclist:[]
+  },
 
-  },
-  onQRcard(){
-    wx.showLoading({
-      title: '生成中',
-    })
-    wx.cloud.callFunction({
-      name:'getQR'
-    }).then((res) => {
-      console.log(res)
-      const fileId = res.result
-      wx.previewImage({
-        urls: [fileId],
-        current:fileId
-      })
-      wx.hideLoading()
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(app.globalData.openId)
+    const playhistory = wx.getStorageSync(app.globalData.openId)
+    console.log(playhistory)
+    if(playhistory.length == 0){
+      wx.showModal({
+        cancelColor: 'cancelColor',
+        title:'播放历史为空',
+      })
+    }else{
+      wx.setStorageSync('musiclist', playhistory)
+      this.setData({
+        musiclist:playhistory
+      })
+    }
   },
 
   /**

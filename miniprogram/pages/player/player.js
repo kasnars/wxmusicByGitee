@@ -26,7 +26,10 @@ Page({
     this._loadmusic(options.musicid)
   },
   _loadmusic(musicId){
-
+    
+    wx.showLoading({
+      title: '加载中',
+    })
     let loadmusic = musiclist[nowMusicIndex]
     console.log(loadmusic)
     wx.setNavigationBarTitle({
@@ -38,9 +41,6 @@ Page({
     })
     app.setPlayMusicId(musicId)
 
-    wx.showLoading({
-      title: '加载中',
-    })
     wx.cloud.callFunction({
       name:'music',
       data:{
@@ -58,6 +58,9 @@ Page({
       }
       getBackgroundAudioManager.src = result.data[0].url
       getBackgroundAudioManager.title = loadmusic.name
+
+      this.savePlayHis()
+      wx.hideLoading()
     })
     this.setData({
       isPlay:true
@@ -80,6 +83,7 @@ Page({
       })
     })
     wx.hideLoading()
+
   },
 
   changeTap(){
@@ -117,7 +121,26 @@ Page({
     this.selectComponent('.lrc').update(event.detail.curtime)
     
   },
-
+  savePlayHis(){
+    const music = musiclist[nowMusicIndex]
+    const openid = app.globalData.openId
+    const history = wx.getStorageSync(openid)
+    let flag = false
+    for (let i = 0;i< history.length;i++){
+      if(history[i].id == music.id){
+        flag = true
+        break
+      }
+    }
+    if(!flag){
+      history.unshift(music)
+      // wx.setStorage({
+      //   key:openid,
+      //   data:history,
+      // })
+      wx.setStorageSync(openid, history)
+    }
+  },
 
 
   /**

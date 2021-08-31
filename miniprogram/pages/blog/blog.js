@@ -1,5 +1,6 @@
 // pages/blog/blog.js
 let keywords = ''
+let app = getApp()
 Page({
 
   /**
@@ -40,6 +41,11 @@ Page({
               img:res.userInfo.avatarUrl,
               name:res.userInfo.nickName
             }
+          })
+          app.globalData.userInfo = this.data.userInfo
+          console.log(app.globalData.userInfo)
+          wx.navigateTo({
+            url: `../../pages/blog-edit/blog-edit?nickName=${this.data.userInfo.name}&avatarUrl=${this.data.userInfo.img}`,
           })
         }
       })
@@ -137,7 +143,13 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (event) {
+    console.log(event)
+    let blogobj = event.target.dataset.blog
+    return{
+      title:blogobj.content,
+      path:`/miniprogram/pages/blog-comment/blog-comment?blogId=${blogobj._id}`,
+      // imageUrl
+    }
   }
 })

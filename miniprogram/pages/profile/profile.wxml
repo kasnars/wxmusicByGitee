@@ -1,1 +1,30 @@
-<text>个人功能开发中</text>
+<view class="header">
+  <view class="img">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data type="userNickName"></open-data>
+</view>
+
+<view class="nav">
+  <view class="nav-item">
+    <navigator hover-class="none" url="/pages/profile-play/profile-play">
+      <text class="iconfont icon-bofanggedan"></text>
+      <text>最近收听</text>
+      <text class="iconfont icon-xiangyou"></text>
+    </navigator>
+  </view>
+  <view class="nav-item">
+    <navigator hover-class="none" url="/pages/profile-blog/profile-blog">
+      <text class="iconfont icon-tree2"></text>
+      <text>我的树洞</text>
+      <text class="iconfont icon-xiangyou"></text>
+    </navigator>
+  </view>
+  <view class="nav-item">
+    <view bindtap="onQRcard">
+      <text class="iconfont icon-ai-code"></text>
+      <text>分享树洞</text>
+      <text class="iconfont icon-xiangyou"></text>
+    </view>
+  </view>
+</view>

@@ -6,14 +6,17 @@
     "pages/muscilist/musiclist",
     "pages/player/player",
     "pages/blog-edit/blog-edit",
-    "pages/blog-comment/blog-comment"
+    "pages/blog-comment/blog-comment",
+    "pages/profile-play/profile-play",
+    "pages/profile-blog/profile-blog",
+    "pages/detail/detail"
   ],
   "requiredBackgroundModes": ["audio"],
 
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#d43c43",
+    "navigationBarBackgroundColor": "#48D1CC",
     "navigationBarTitleText": "音乐",
     "navigationBarTextStyle": "white"
   },

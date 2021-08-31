@@ -1,2 +1,19 @@
-<!--pages/blog-comment/blog-comment.wxml-->
-<text>pages/blog-comment/blog-comment.wxml</text>
+<scroll-view scroll-y="true">
+  <blogcard blog="{{blog}}"></blogcard>
+  <view class="bar">
+    当前评论：
+  </view>
+  <block wx:for="{{commentList}}" wx:key="index">
+  <view class="user">
+    <view class="usercom">
+      <image src="{{item.avatalUrl}}" class="userimg"></image>
+      <view class="userinf">
+        <text class="username">{{item.nickName}}</text> 
+        <view class="usertime">{{item.createTime}}</view>
+      </view>
+    </view>
+    <view class="usertext">{{item.content}}</view>
+    </view>
+  </block>
+</scroll-view>
+<blog-ctrl blogid="{{blog._id}}" bind:refresh="_getBlogComment" class="fixed"></blog-ctrl>

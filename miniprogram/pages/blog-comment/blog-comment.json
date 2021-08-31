@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "blogcard":"../../components/blogcard/blogcard",
+    "blog-ctrl":"../../components/blog-ctrl/blog-ctrl"
+  }
 }

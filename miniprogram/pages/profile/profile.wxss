@@ -1,1 +1,43 @@
-/* pages/profile/profile.wxss */
+page{
+  background: #f1f1f1;
+}
+.header{
+ background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.zhimg.com%2F50%2Fv2-b8d6374276c18885ec289ae968561674_hd.jpg&refer=http%3A%2F%2Fpic1.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625746853&t=2adfb2dc53a919986b36d25a0d211648);
+  background-size: cover;
+  height: 480rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40rpx;
+}
+.img{
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 40rpx;
+}
+.nav{
+  background: #ffff;
+  width: 90%;
+  margin: 0 auto;
+}
+.nav-item{
+  box-sizing: border-box;
+  padding: 10rpx 30rpx;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  height: 75rpx;
+}
+.nav-item .iconfont{
+  padding-right: 40rpx;
+}
+.nav-item .icon-xiangyou{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0,-50%);
+}

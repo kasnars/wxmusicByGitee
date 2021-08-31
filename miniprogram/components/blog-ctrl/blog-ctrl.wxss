@@ -1,0 +1,43 @@
+.ctrl{
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  height: 120%;
+}
+
+.ctrl-item{
+  flex: 1;
+  text-align: center;
+  color: rgba(40, 47, 60, 0.8);
+  line-height: 32rpx;
+  font-size: 38rpx;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.ctrl-item .icon{
+  margin-right: 12rpx;
+  font-size: 32rpx;
+  line-height: 32rpx;
+}
+.send{
+  text-align: right;
+  float: right;
+}
+.comment{
+  box-sizing: border-box;
+  text-align: left;
+  padding: 50rpx;
+}
+.btn::after{
+  border: none;
+}
+.btn{
+  background-color: white;
+  border-radius: 0;
+  color: rgba(40, 47, 60, 0.8);
+  font-weight: normal;
+}

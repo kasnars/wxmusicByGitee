@@ -1,4 +1,4 @@
-// pages/profile/profile.js
+// pages/detail/detail.js
 Page({
 
   /**
@@ -7,22 +7,7 @@ Page({
   data: {
 
   },
-  onQRcard(){
-    wx.showLoading({
-      title: '生成中',
-    })
-    wx.cloud.callFunction({
-      name:'getQR'
-    }).then((res) => {
-      console.log(res)
-      const fileId = res.result
-      wx.previewImage({
-        urls: [fileId],
-        current:fileId
-      })
-      wx.hideLoading()
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

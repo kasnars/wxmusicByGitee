@@ -15,7 +15,7 @@
 }
 .searchbtn{
   flex: 1;
-  background: #d43c43;
+  background: #48D1CC;
   color: #ffffff;
   margin-left: 20rpx;
   font-size: 24rpx;
