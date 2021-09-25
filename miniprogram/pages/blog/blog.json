@@ -5,6 +5,6 @@
     "blogcard":"../../components/blogcard/blogcard",
     "blogctrl":"../../components/blog-ctrl/blog-ctrl"
   },
-  "navigationBarTitleText": "发现",
+  "navigationBarTitleText": "树洞",
   "enablePullDownRefresh": true
 }

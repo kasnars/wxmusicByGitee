@@ -47,4 +47,5 @@
 .usertext{
   margin: 10rpx 20rpx;
   font-size: 35rpx;
+  text-indent: 2rem;
 }

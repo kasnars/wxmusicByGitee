@@ -47,6 +47,7 @@ Page({
         commentList,
         blog:res.result.detail[0],
       })
+      console.log(commentList.length,'com')
     })
   },
   /**
