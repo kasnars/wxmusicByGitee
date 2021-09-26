@@ -9,11 +9,16 @@
   background-color: #f1f1f1;
 }
 .bar{
-  margin: 10rpx 20rpx;
+  margin: 10rpx 20rpx 80rpx 20rpx;
   height: 90rpx;
   line-height: 90rpx;
   font-style: italic;
-  font-weight: bold;
+  font-weight: 600;
+  background-color: #fff;
+  margin: 10rpx 20rpx;
+  border-radius: 20px;
+  box-sizing: border-box;
+  text-indent: 2rem;
 }
 .user{
   background-color: #fff;
@@ -39,13 +44,35 @@
   flex-wrap: wrap;
 }
 .username{
-  font-size: 25rpx;
+  font-size: 35rpx;
 }
 .usertime{
-  font-size: 25rpx;
+  font-size: 35rpx;
 }
 .usertext{
   margin: 10rpx 20rpx;
+  font-size: 40rpx;
+  text-indent: 2rem;
+}
+.nocomment{
+  position: relative;
+  padding: 0;
+  margin: 10rpx 20rpx;
   font-size: 35rpx;
   text-indent: 2rem;
+  color: red;
+  background-color: #fff;
+  text-align: center;
+  height: 100rpx;
+}
+.intext{
+  height: 50rpx;
+  text-indent: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }

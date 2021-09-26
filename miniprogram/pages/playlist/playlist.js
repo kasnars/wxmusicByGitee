@@ -8,13 +8,16 @@ Page({
    */
   data: {
     swiperImgUrl:[{
-      url: 'http://p1.music.126.net/oeH9rlBAj3UNkhOmfog8Hw==/109951164169407335.jpg',
+      url: 'https://p1.music.126.net/bMzLFRgEha913U2_DeP3Yg==/109951163433862798.jpg',
+      id: 902633862
     },
     {
-      url: 'http://p1.music.126.net/xhWAaHI-SIYP8ZMzL9NOqg==/109951164167032995.jpg',
+      url: 'https://p1.music.126.net/AB-3WsIeCfDPkRyF_csLVQ==/109951165260265255.jpg',
+      id: 5152332685
     },
     {
-      url: 'http://p1.music.126.net/Yo-FjrJTQ9clkDkuUCTtUg==/109951164169441928.jpg',
+      url: 'https://p1.music.126.net/ns0C_DgZp8SAxwWLjtJ_7Q==/109951165137169029.jpg',
+      id: 5051447966
     }
   ],
   playlist:[]
@@ -24,6 +27,12 @@ Page({
     console.log(e.currentTarget.dataset.picid)
     wx.navigateTo({
       url:'../detail/detail'
+    })
+  },
+  gotoMusicList(e){
+    const targetUrl = this.data.swiperImgUrl[e.currentTarget.dataset.picid].id
+    wx.navigateTo({
+      url: `../../pages/muscilist/musiclist?playlistId=${targetUrl}`,
     })
   },
   /**

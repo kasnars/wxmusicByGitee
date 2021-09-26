@@ -1,7 +1,7 @@
 <scroll-view scroll-y="true">
   <blogcard blog="{{blog}}"></blogcard>
   <view class="bar">
-    当前评论：
+    当前评论：  共有{{commentList.length}}条
   </view>
   <block wx:if="{{commentList.length > 0 }}">
     <block wx:for="{{commentList}}" wx:key="index">
@@ -18,7 +18,9 @@
     </block>
   </block>
   <block wx:if="{{!commentList.length > 0 }}">
-    <block>这里暂无评论哟</block>
+    <view class="nocomment">
+      <text class="intext">这里暂无评论哟</text>
+    </view>
   </block>
 </scroll-view>
 <blog-ctrl blogid="{{blog._id}}" bind:refresh="_getBlogComment" class="fixed"></blog-ctrl>
